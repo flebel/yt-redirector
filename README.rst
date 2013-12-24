@@ -9,7 +9,7 @@ Requirements:
 * flask
 
 This requirement is expressed in the requirements.txt file and may be installed
-by running the following command (from within a virtual environment)::
+by running the following command (ideally from a virtual environment)::
 
     pip install -r requirements.txt
 
