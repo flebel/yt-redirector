@@ -5,7 +5,7 @@ from xml.etree import ElementTree
 import urllib2
 
 app = Flask(__name__)
-url = 'https://gdata.youtube.com/feeds/api/videos?q={{QUERY}}&orderby=relevance&max-results=1&v=2'
+url = u'https://gdata.youtube.com/feeds/api/videos?q={{QUERY}}&orderby=relevance&max-results=1&v=2'
 
 
 @app.route('/<query>')
