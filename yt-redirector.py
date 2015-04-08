@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 
-from flask import Flask, redirect
-from xml.etree import ElementTree
 import urllib2
+from xml.etree import ElementTree
+
+from flask import Flask, redirect
+
 
 app = Flask(__name__)
 url = u'https://gdata.youtube.com/feeds/api/videos?q={{QUERY}}&orderby=relevance&max-results=1&v=2'
@@ -25,4 +27,3 @@ def query(query):
 
 if __name__ == '__main__':
     app.run(debug=True)
-
