@@ -7,12 +7,12 @@ from flask import Flask, redirect
 
 
 app = Flask(__name__)
-url = u'https://gdata.youtube.com/feeds/api/videos?q={{QUERY}}&orderby=relevance&max-results=1&v=2'
+url = u'https://gdata.youtube.com/feeds/api/videos?q={query}&orderby=relevance&max-results=1&v=2'
 
 
 @app.route('/<query>')
 def query(query):
-  video_url = url.replace('{{QUERY}}', query)
+  video_url = url.format(query=query)
   xml = urllib2.urlopen(video_url)
   tree = ElementTree.parse(xml)
   root = tree.getroot()
